@@ -19,7 +19,7 @@ Top-N documents, denoted as D, are used for estimating a query-related term dist
 **Likelihood Function:**
 Find <img alt="$\theta_R$" src="svgs/cd4914230768b7ddbf66302324036950.png?invert_in_darkmode" align="middle" width="17.61276pt" height="22.745910000000016pt"/> and a set of <img alt="$α_d$" src="svgs/b94aed9ed555ad6498dedda3be0f2c8c.png?invert_in_darkmode" align="middle" width="6.817552500000002pt" height="14.102549999999994pt"/> for each document d in D maximizing <img alt="$F(\theta_R,  \alpha_d)$" src="svgs/e5e29c2da59a509699b1b295a13a1a2d.png?invert_in_darkmode" align="middle" width="69.45411pt" height="24.56552999999997pt"/>.
 
-<p align="center"><img alt="$$F(\theta_R, \alpha_d)=L(\theta_R,α_d)G(\theta_R)$$" src="svgs/867d66a4145abd8a0945e36864ba9b71.png?invert_in_darkmode" align="middle" width="192.71835pt" height="16.376943pt"/></p> 
+<p align="center"><img alt="$$F(\theta_R, \alpha_d)=L(\theta_R, \alpha_d)G(\theta_R)$$" src="svgs/11950511a903203d3cdadfa19250f1e9.png?invert_in_darkmode" align="middle" width="203.1942pt" height="16.376943pt"/></p> 
 <p align="center"><img alt="$$L(\theta_R, \alpha_d|D)=\prod_{d \in D}\prod_{w \in V}[ \alpha P(w|\theta_R)+(1- \alpha_d)P(w|\theta_B)]^{c(w,d)}$$" src="svgs/601bc633d042559f06d463b322644e71.png?invert_in_darkmode" align="middle" width="424.37999999999994pt" height="37.893570000000004pt"/></p> 
 <p align="center"><img alt="$$G(\theta_R)=\prod_{w \in V}P(w|\theta_R)^{\mu P(w|Q)}$$" src="svgs/0987625ddfbaae688eb88654836e54f4.png?invert_in_darkmode" align="middle" width="210.98219999999998pt" height="37.765695pt"/></p>
 
@@ -28,7 +28,7 @@ Estimate <img alt="$ \alpha_d$" src="svgs/a8cb937c6ad7c348826c71f671e29853.png?i
 
 **E step:**
  
-<p align="center"><img alt="$$P(\theta_R|w,d)=\frac{α_dP(w|\theta_R)}{ \alpha_d P(w|\theta_R)+(1- \alpha_d)P(w|\theta_B)}$$" src="svgs/08c16ac2b8585f7aa7ebe9903e89170e.png?invert_in_darkmode" align="middle" width="320.25674999999995pt" height="38.773514999999996pt"/></p>
+<p align="center"><img alt="$$P(\theta_R|w,d)=\frac{ \alpha_dP(w|\theta_R)}{ \alpha_d P(w|\theta_R)+(1- \alpha_d)P(w|\theta_B)}$$" src="svgs/9351a81c887b60b298e84fdac36783da.png?invert_in_darkmode" align="middle" width="320.25674999999995pt" height="38.773514999999996pt"/></p>
 
 <img alt="$P(\theta_R|w,d)$" src="svgs/4de34deb115bb122d2e26b5e7211c0ff.png?invert_in_darkmode" align="middle" width="76.53574499999999pt" height="24.56552999999997pt"/> is posterior probability of w generating from <img alt="$\theta_R$" src="svgs/cd4914230768b7ddbf66302324036950.png?invert_in_darkmode" align="middle" width="17.61276pt" height="22.745910000000016pt"/>.
 
